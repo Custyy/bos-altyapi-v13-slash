@@ -26,7 +26,7 @@ const allFiles = client.commands.map(command => {
 })
 
 client.on('ready', async () => {
-    client.guilds.cache.get(config.guildId).commands.set(allFiles)
+    client.application.commands.set(allFiles)
 })
 
 client.on('interactionCreate', (interaction) => {
